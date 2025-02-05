@@ -7,18 +7,22 @@ body {
 }
 
 .generic-container{
-    display: flex;                              /* Organizando os itens do container*/
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
 
+    display: flex;                              /* Organizando os itens do container*/
     /*justify-content: a ajustar*/              /* Organiza os itens horizontalmente*/
     /*align-itens: a ajustar*/                  /* Organiza os itens verticalmente*/
     background-color: rgba(43, 48, 59, 0.8);  /* Cor de fundo do container genérico*/
-    width: 80%;                                 /* Largura do container*/
+    width: 40%;                                 /* Largura do container*/
     border-style: solid;                        /* Estilo da borda*/
     border-color: rgba(255, 235, 59, 0.5);    /* Cor da Borda*/
     border-width: 1px;                          /* Largura da Borda*/
     border-radius: 20px;                        /* Arrendondamento da borda*/
     margin: 20px/*<- topo*/ auto;               /* Margin:auto -> divide igualmente o horizonte*/
     padding: 20px;                              /* Espaço interno*/
+    flex-direction: row;
 }
 
 .generic-container-column{
@@ -27,17 +31,18 @@ body {
 }
 
 .contato{
+    margin: auto;
     display: flex;                          /* Organizando os itens do container*/
     flex-direction: column;                 /* Definindo o eixo vertical o principal*/
     justify-content: flex-start;
     width: 100%;                            /* Largura do container*/
-    gap: 10px;                              /* Espaçõs entre itens*/
-    margin-right: 100px;
+    gap: 10%;                              /* Espaçõs entre itens*/
+
 }
 
 .contato img {                              /* Configuração da selfie*/
-    width: 200px;                           /* Largura selfie*/
-    height: 200px;                          /* Comprimento selfie*/
+    width: 100%;                           /* Largura selfie*/
+    height:auto;                          /* Comprimento selfie*/
     object-fit: cover;                      /* Evitar distorção*/
     border-radius: 50%;                     /* Deixando a imagem redonda*/
 }
@@ -48,6 +53,26 @@ body {
     gap: 50px;                              /* Espaço entre os icones*/ 
 
 }
+
+.about-me {
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.about-me h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.about-me p {
+    font-size: 1em;
+
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
 
 a.link-contato{                                /* Estilo para limitar o link ao icone*/
     width: 10px;
@@ -145,21 +170,3 @@ a.link-contato:hover i{
     transform: scale(1.1); /* Aumenta o card ao passar o mouse */
 }
 
-.about-me {
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 800px;
-    margin: 20px auto;
-}
-
-.about-me h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-.about-me p {
-    font-size: 1.1em;
-
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
