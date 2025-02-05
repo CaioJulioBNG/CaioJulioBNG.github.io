@@ -1,0 +1,165 @@
+body {
+    background-color: black;        /* Background geral*/
+    color: #F5D76E;                 /* Cor do texto geral*/
+    font-family: Arial, sans-serif;   /* Fonte geral*/
+    margin: 0;                        /* Limpando margem do navegador*/
+    padding: 0;                       /* Limpando padding do navegador*/
+}
+
+.generic-container{
+    display: flex;                              /* Organizando os itens do container*/
+
+    /*justify-content: a ajustar*/              /* Organiza os itens horizontalmente*/
+    /*align-itens: a ajustar*/                  /* Organiza os itens verticalmente*/
+    background-color: rgba(43, 48, 59, 0.8);  /* Cor de fundo do container genérico*/
+    width: 80%;                                 /* Largura do container*/
+    border-style: solid;                        /* Estilo da borda*/
+    border-color: rgba(255, 235, 59, 0.5);    /* Cor da Borda*/
+    border-width: 1px;                          /* Largura da Borda*/
+    border-radius: 20px;                        /* Arrendondamento da borda*/
+    margin: 20px/*<- topo*/ auto;               /* Margin:auto -> divide igualmente o horizonte*/
+    padding: 20px;                              /* Espaço interno*/
+}
+
+.generic-container-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.contato{
+    display: flex;                          /* Organizando os itens do container*/
+    flex-direction: column;                 /* Definindo o eixo vertical o principal*/
+    justify-content: flex-start;
+    width: 100%;                            /* Largura do container*/
+    gap: 10px;                              /* Espaçõs entre itens*/
+    margin-right: 100px;
+}
+
+.contato img {                              /* Configuração da selfie*/
+    width: 200px;                           /* Largura selfie*/
+    height: 200px;                          /* Comprimento selfie*/
+    object-fit: cover;                      /* Evitar distorção*/
+    border-radius: 50%;                     /* Deixando a imagem redonda*/
+}
+
+.contato-icone{                             /* Posicionamento do icone*/
+    display: flex;                          /* Display flexivel*/
+    flex-direction: row;                    /* Sentido horizontal*/
+    gap: 50px;                              /* Espaço entre os icones*/ 
+
+}
+
+a.link-contato{                                /* Estilo para limitar o link ao icone*/
+    width: 10px;
+    display: flex;                             /* Flexivel*/
+    align-items: center;                       /* Alinhando ao centro*/
+    gap: 8px;                                  /* Espaço entre a imagem e o texto*/
+    text-decoration: none;                     /* Tirando a decoração do texto*/
+    color: inherit;                            /* Herdando a cor*/
+    transition: transform 0.2s, color 0.2s;    /* Efeito*/
+}
+
+a.link-contato i {
+    font-size: 30px;                           /* Tamanho da Imagem*/
+    color: rgba(255, 235, 59, 0.5);          /* Cor da imagem*/
+    transition: transform 0.2s, color 0.2s;    /* Efeito*/
+}
+
+a.link-contato:hover i{
+    color: #F5D76E;                          /* Amarelo mais forte para o hover*/
+    transform: scale(1.2);                     /* Aumentando de tamanho com o hover*/
+}
+
+.card-container{
+    margin: auto;                              /* Alinhamento dos cartôes ao centro*/
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;                                 /* Distancia entre cards*/
+    margin-top: 100px;                         /* Distancia do topo externo*/
+}
+
+.card-curso{
+    height: 550px;
+    display: flex;                               /* Display flexível*/
+    flex-direction: column;                      /* Direção vertical*/
+    gap: 50px;                                   /* Distancia entre topicos*/
+    border-style: solid;                         /* Tipo de borda*/
+    border-color: #F5D76E;                     /* Cor da Borda*/
+    border-width: 1px;                           /* Largura da borda*/
+    border-radius: 10px;                         /* Arrendodamento */
+    padding: 20px;                               /* Distancia interna*/
+    width: 200px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;       /* Suaviza a transição ao aumentar */
+    cursor: pointer;                              /* Indica que o card é clicável */
+}
+
+.card-curso:hover {
+    transform: scale(1.1); /* Aumenta o card ao passar o mouse */
+}
+
+.card-curso img{
+    /*margin: auto;*/                                /* Alinhamento ao Centro*/
+    width: 200px;
+    height: 250px;
+    border-radius: 25%;
+
+    align-items: center;
+}
+
+.card-curso i{
+    color: white;
+    font-size: 200px;
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 30px;
+}
+
+.card-curso h3{
+    background-color: rgba(255, 235, 59, 0.5); 
+    color: black;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card-curso p{
+    border-style: solid;
+    border-color: rgba(255, 235, 59, 0.5);
+    border-width: 1px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+}
+
+
+.card-link {
+    text-decoration: none; /* Remove a sublinhado do link */
+    color: inherit; /* Herda a cor do texto do elemento pai */
+}
+
+.card-link:hover .card-curso {
+    transform: scale(1.1); /* Aumenta o card ao passar o mouse */
+}
+
+.about-me {
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.about-me h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.about-me p {
+    font-size: 1.1em;
+
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
