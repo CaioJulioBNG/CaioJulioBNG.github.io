@@ -69,11 +69,17 @@ p {
   color: #7aa2f7; 
   display: flex;   
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center; /* centraliza horizontalmente os filhos */
+  align-items: center;     /* centraliza verticalmente dentro do flex */
   text-align: center;
   gap: 3rem;
   padding: 4rem;
+  max-width: 1200px;
+  
+  /* centraliza a própria página dentro da .page */
+  margin: auto;            
+  height: 100%;
+  overflow-y: auto;
 }
 
 .page2 {
@@ -324,5 +330,42 @@ p {
 }
 
 /*page3*/
+
+/* Responsividade para telas menores */
+@media (max-width: 900px) {
+  .page1 {
+    flex-direction: column;       /* empilha verticalmente selfie e sobre-mim */
+    align-items: center;          /* centraliza horizontalmente */
+    text-align: center;           /* centraliza textos */
+    padding: 2rem 1rem;                /* menos padding em telas pequenas */
+    gap: 2rem;                    /* reduz espaço entre elementos */
+    height: auto;
+  }
+
+  .selfie-container {
+    margin-right: 0;              /* remove margin que empurrava para o lado */
+  }
+
+  .selfie {
+  max-height: 30vh;      /* altura máxima relativa à tela */
+  width: auto;           /* largura ajusta automaticamente */
+  }
+
+
+  .sobre-mim {
+    max-width: 100%;              /* ocupa toda largura disponível */
+  }
+
+  .contato-buttons {
+    flex-direction: column;       /* botões empilham verticalmente */
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .btn {
+    width: 100%;                  /* botões ocupam largura máxima */
+    justify-content: center;      /* centraliza conteúdo do botão */
+  }
+}
 
 
