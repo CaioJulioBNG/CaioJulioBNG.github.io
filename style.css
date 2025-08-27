@@ -1,0 +1,328 @@
+/* Variáveis de cor */
+:root {
+  /* Tokyo Night - fundos */
+  --tn-bg: #1a1b26;
+  --tn-card: #24273a;
+  --tn-border: #444b6a;
+  --bg-dark: #1a1b26;
+  --bg-light: #24283b;
+  --accent: #7aa2f7;
+
+  /* Catppuccin - textos */
+  --cp-text: #c6d0f5;
+  --cp-title: #f5bde6;
+  --cp-subtitle: #f8c0c8;
+  --cp-link: #89dceb;
+  --text-sub: #a6adc8;
+  --text-accent: #f5c2e7;
+}
+
+/* Reset básico e definições gerais*/
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: var(--tn-bg);
+  color: var(--cp-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--cp-title); 
+  margin: 0.5rem 0;       /* margem uniforme */
+  font-weight: 600;
+}
+
+h4, h5, h6 {
+  color: var(--cp-subtitle);
+}
+
+p {
+  color: var(--text-sub);  
+  font-size: 1rem;         
+  line-height: 1.5;
+  margin: 0.3rem 0;
+  margin-bottom: 20px;
+}
+
+
+/*Parte para o Scroll Snap*/
+.container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.page {
+  min-height: 100vh; /* garante que a página tenha pelo menos 100vh */
+  height: auto;       /* permite que cresça com o conteúdo */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* alinhamento no topo */
+  font-size: 2rem;
+  scroll-snap-align: start;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.page1 {
+  background: #1a1b26;
+  color: #7aa2f7; 
+  display: flex;   
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  gap: 3rem;
+  padding: 4rem;
+}
+
+.page2 {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  background: #24283b;
+  color: #bb9af7;
+  padding: 1rem;
+}
+
+.page3 {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  background: #1a1b26;
+  color: #bb9af7;
+  padding: 1rem;
+}
+
+.page4 {
+  background: #24283b;
+  color: #e0af68;     
+}
+
+/*Page1*/
+
+.selfie {
+  width: 21rem;
+  height: 21rem;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+  margin-bottom: 1rem;
+}
+
+.selfie-container {
+  flex: 1 1 300px;
+  display: flex;
+  margin-right: 150px;
+  flex-direction: column; /* empilha verticalmente */
+  align-items: center;    /* centraliza horizontalmente */
+  gap: 0.3rem;            /* espaçamento*/
+}
+
+.sobre-mim {
+  flex: 2 1 400px;   /* ocupa mais espaço que a imagem */
+  max-width: 600px;
+  text-align: left;
+}
+
+.contato {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* alinha à esquerda da coluna */
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.contato-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;        /* espaço entre botões */
+  flex-wrap: wrap;  /* responsivo, quebra linha se necessário */
+}
+
+.btn {
+  text-decoration: none;
+  background: var(--tn-card);
+  color: var(--cp-link);
+  border: 2px solid var(--tn-border);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--accent);
+  color: var(--tn-bg);
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(122, 162, 247, 0.3);
+}
+
+/* Base para todas as techs */
+.tech {
+  font-weight: bold;
+  padding: 0.1rem 0.3rem;
+  border-radius: 5px;
+  color: #fff;
+}
+
+/* Cores personalizadas por linguagem */
+.tech.html { background: #e44d26; }       
+.tech.css { background: #264de4; }       
+.tech.js { background: #f0db4f; color: #000; } 
+.tech.php { background: #777bb4; }
+.tech.mysql { background: #00758f; }
+
+.tech.python { background: #3776ab; }
+.tech.sklearn { background: #f7931e; }
+.tech.catboost { background: #9acd32; color: #000; }
+.tech.xgb { background: #e68523; }
+
+.tech.java { background: #5382a1; }
+.tech.csharp { background: #68217a; }
+
+.tech.powerbi { background: #f2c811; }
+.tech.kpi { background: #34a853; }
+.tech.dashboard { background: #4285f4; }
+.tech.optuna { background: #6f42c1; }
+
+.tech.esp32 { background: #009688; color: #fff; }      /* Verde azulado, hardware/IoT */
+.tech.mqtt { background: #ff5722; color: #fff; }       /* Laranja forte, protocolo de mensagens */
+.tech.flowfuse { background: #9c27b0; color: #fff; }   /* Roxo, destaque visual */
+.tech.iot { background: #795548; color: #fff; }    
+/*Page2*/
+
+.projetos-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Card */
+.card {
+  background: #1a1b26; /* exemplo Tokyo Night */
+  width: 12rem;
+  height: 20rem;
+  border-radius: 12px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+  display: flex;           /* flex container */
+  flex-direction: column;  /* empilha verticalmente */
+  align-items: center;     /* centraliza horizontalmente */
+}
+
+.page3 .card{
+  background: #24283b; /* exemplo Tokyo Night */
+  width: 20rem;
+  height: 15rem;
+  border-radius: 12px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+  display: flex;           /* flex container */
+  flex-direction: column;  /* empilha verticalmente */
+  align-items: center;     /* centraliza horizontalmente */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.card-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.modal {
+  display: none; /* começa escondido */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 27, 38, 0.85); /* Tokyo Night escuro com transparência */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #24273a; /* Tokyo Night Card */
+  color: #c6d0f5; /* Catppuccin texto */
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.modal-content h2 {
+  color: #f5bde6; /* Catppuccin título */
+  margin-bottom: 1rem;
+}
+
+.modal-content p {
+  color: #a6adc8; /* Catppuccin subtítulo/texto secundário */
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.modal-content img {
+  width: 80%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  border: 2px solid #7aa2f7; /* destaque azul Tokyo Night */
+}
+
+.modal-content a {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #7aa2f7; /* azul Tokyo Night */
+  color: #1a1b26;      /* texto escuro para contraste */
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.modal-content a:hover {
+  background: #89dceb; /* Catppuccin link */
+  color: #1a1b26;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f5c2e7; /* Catppuccin accent */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #f5bde6; /* destaque ao passar o mouse */
+}
+
+.modal-img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/*page3*/
+
+

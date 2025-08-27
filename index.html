@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caio Julio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+<header>
+</header>
+
+<main>
+  <div class="container">
+
+    <section class="page page1">
+      <div class ="selfie-container">
+        <img src="img/foto.jpg" alt="Foto de perfil" class="selfie">
+        <h3>Caio Julio</h3>
+        <p>Estudante de ADS - PUCPR</p>
+
+        <div class="contato-buttons">
+          <a href="mailto:caiojulio_bng@outlook.com" class="btn">
+            <i class="fa-solid fa-envelope"></i> E-mail
+          </a>
+          <a href="https://www.linkedin.com/in/caio-julio-cardoso-9a979b296/" target="_blank" class="btn">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+            <a href="https://github.com/CaioJulioBNG" target="_blank" class="btn">
+              <i class="fa-brands fa-github"></i> GitHub
+          </a>
+          <a href="Caio.pdf" target="_blank" download class="btn">
+            <i class="fa-solid fa-download"></i> Baixar Currículo
+          </a>
+        </div>
+      </div>
+
+
+      <div class="sobre-mim">
+        <h2>Sobre Mim:</h2>
+        <p>
+          Sou estudante de Análise e Desenvolvimento de Sistemas e tenho interesse em atuar como desenvolvedor FullStack e também na área de Dados e Machine Learning.
+          Tenho experiência prática em desenvolvimento web, com projetos que envolvem 
+          <span class="tech html">HTML</span>, 
+          <span class="tech css">CSS</span>, 
+          <span class="tech js">JavaScript</span>, 
+          <span class="tech php">PHP</span> e 
+          <span class="tech mysql">MySQL</span>, incluindo uma aplicação de loja online com sistema de login.
+        </p>
+        <p>
+          Participo regularmente de competições de Machine Learning no Kaggle, utilizando 
+          <span class="tech python">Python</span> e bibliotecas como 
+          <span class="tech sklearn">scikit-learn</span>, 
+          <span class="tech catboost">Catboost</span> e 
+          <span class="tech xgb">XGBoost</span> para análise e modelagem preditiva.
+          Também possuo conhecimento em 
+          <span class="tech java">Java</span>, aplicado em Programação Orientada a Objetos e dispositivos móveis, e já desenvolvi um quiz interativo em 
+          <span class="tech csharp">C#</span> para praticar lógica de programação, linguagem que também desperta meu interesse.
+        </p>
+        <p>
+          Busco constantemente aprender novas tecnologias e aplicar boas práticas, unindo desenvolvimento de software e ciência de dados para criar soluções eficientes e inovadoras. 
+        </p>
+      </div>
+
+    </section>
+
+
+
+
+
+    <section class="page page2">
+      <h2 style="margin-bottom: 1rem;">Meus Projetos</h2>
+
+      <div class="projetos-container">
+        <div class="card" onclick="openModal('modal1')">
+          <img src="img/fullstack.png" alt="Projeto 1" class="card-img">
+          <h6>Site de Pizzaria - Fullstack</h6>
+          <p>
+          <span class="tech html">HTML</span>, 
+          <span class="tech css">CSS</span>, 
+          <span class="tech js">JavaScript</span>, 
+          <span class="tech php">PHP</span>,
+          <span class="tech mysql">MySQL</span>
+          </p>
+        </div>
+
+        <div class="card" onclick="openModal('modal2')">
+          <img src="img/Dados.png" alt="Projeto 2" class="card-img">
+          <h6>Análise e Previsão de Vendas</h6>
+          <p>
+          <span class="tech powerbi">PowerBI</span>, 
+          <span class="tech kpi">Kpi</span>, 
+          <span class="tech dashboard">Dashboard</span>, 
+          <span class="tech python">Python</span>,
+          <span class="tech catboost">Catboost</span>,
+          <span class="tech optuna">Optuna</span>
+          </p>
+        </div>
+
+        <div class="card" onclick="openModal('modal3')">
+          <img src="img/ESP32.png" alt="Projeto 3" class="card-img">
+          <h6>Simulação: ESP32 + MQTT</h6>
+          <p>
+          <span class="tech esp32">ESP32</span>, 
+          <span class="tech mqtt">MQTT</span>, 
+          <span class="tech flowfuse">Flowfuse</span>, 
+          <span class="tech iot">IoT</span>,
+          <span class="tech dashboard">Dashboard</span>,
+          <span class="tech python">Python</span>
+          </p>
+        </div>
+
+        <div class="card" onclick="openModal('modal4')">
+          <img src="img/catboost.png" alt="Projeto 4" class="card-img">
+          <h6>Kaggle Playgrounds - Top 16%</h6>
+          <p>
+          <span class="tech python">Python</span>, 
+          <span class="tech catboost">Catboost</span>, 
+          <span class="tech sklearn">Scikit-learn</span>
+          </p>
+        </div>
+
+        <div class="card" onclick="openModal('modal6')">
+          <img src="img/java.png" alt="Projeto 5" class="card-img">
+          <h6>Java POO - Financiador de Imóveis</h6>
+          <p>
+          <span class="tech java">Java</span>
+          </p>
+        </div>
+
+        <div class="card" onclick="openModal('modal5')">
+          <img src="img/int.png" alt="Projeto 5" class="card-img">
+          <h6>Jogo: Perguntas e Respostas</h6>
+          <p>
+          <span class="tech csharp">C#</span>
+          </p>
+        </div>
+        
+      </div>
+
+    </section>
+
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal1')">&times;</span>
+      <h2>Pizzaria Fullstack</h2>
+      <img src="img/fullstack.png" alt="Projeto 1" class="modal-img">
+      <p>Este projeto foi criado no escopo da matéria "Fundamentos de Programação Web" do curso Análise e Desenvolvimento de Sistemas, da faculdade PUCPR</p>
+      <p>Detalhes do Projeto:</p>
+      <ul style="text-align: left;">
+        <li>Tecnologias usadas no Frontend: HTML + CSS + JavaScript</li>
+        <li>Tecnologias usadas no Backend: PHP, MySQL</li>
+        <li>Sistema de cadastro de clientes</li>
+        <li>Sistema de Login</li>
+        <li>Banco de Dados MySQL para armazenamento de clientes com criptografia</li>
+      </ul>
+      <br>
+        <a href="https://github.com/CaioJulioBNG/fullstack_faculdade/tree/main" target="_blank" class="btn">
+          <i class="fa-brands fa-github"></i> Veja o Projeto Completo
+        </a>
+    </div>
+  </div>
+  
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal2')">&times;</span>
+      <h2>Análise e Previsão de Vendas</h2>
+      <img src="img/Dados.png" alt="Projeto 2" class="modal-img">
+      <p>Este projeto foi criado no escopo da matéria "Inteligência Analítica em Negócios " do curso Análise e Desenvolvimento de Sistemas, da faculdade PUCPR</p>
+      <p>Detalhes do Projeto:</p>
+      <ul style="text-align: left;">
+        <li>Análise preliminar de dados com PowerBI</li>
+        <li>Criação de novas Kpi's</li>
+        <li>Criação de dashboard interativo com PowerBI</li>
+        <li>Limpeza e Preparação de Dados com Pandas</li>
+        <li>Tratamento de colunas categóricas com o One-Hot Encoding</li>
+        <li>Utilização do modelo de Regressão Catboost</li>
+        <li>Otimização de Hiperparâmetros com Optuna</li>
+        <li>Validação Cruzada utilizando a métrica RMSE</li>
+        <li>Geração de um relatório com os insight's obtidos</li>
+      </ul>
+      <br>
+        <a href="https://github.com/CaioJulioBNG/previsao-de-vendas-sazonais/tree/main" target="_blank" class="btn">
+          <i class="fa-brands fa-github"></i> Veja o Projeto Completo
+        </a>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal3')">&times;</span>
+      <h2>Análise e Previsão de Vendas</h2>
+      <img src="img/ESP321.png" alt="Projeto 3" class="modal-img">
+      <p>Este projeto foi criado no escopo da matéria "Internet das Coisas em um Mundo Conectado" do curso Análise e Desenvolvimento de Sistemas, da faculdade PUCPR</p>
+      <p>Detalhes do Projeto:</p>
+      <ul style="text-align: left;">
+        <li>Simulação de um poste inteligente, com sensores de movimento para apagar a luz de forma automática.</li>
+        <li>As informações coletadas pelo sensores são enviadas, através de um Broker MQTT, para a plataforma FlowFuse</li>
+        <li>Foi criado um dashboard interativo, com a opção de controle manual / automático da luz</li>
+      </ul>
+      <br>
+        <a href="https://github.com/CaioJulioBNG/IOT_MQTT/tree/master" target="_blank" class="btn">
+          <i class="fa-brands fa-github"></i> Veja o Projeto Completo
+        </a>
+    </div>
+  </div>
+
+  <div id="modal4" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal4')">&times;</span>
+      <h2>Análise e Previsão de Vendas</h2>
+      <img src="img/catboost.png" alt="Projeto 3" class="modal-img">
+      <p>Esse projeto foi criado no escopo da competição de Machine Learning, de nível Playground, no site da Kaggle.</p>
+      <p>A competição consistia em prever a quantidade de calorias queimadas durante atividades físicas, com características fisiológicas e dados da ativadade</p>
+      <p>Detalhes do Projeto:</p>
+      <ul style="text-align: left;">
+        <li>Utilizado o modelo de Machine Learning catboost.</li>
+        <li>Engenharia de atributos (feature engineering)</li>
+        <li>Tratamento de dados categóricos</li>
+        <li>Validação Cruzada com Kfold + Métrica RMSE</li>
+        <li>Colocação: 677 / 4318</li>
+      </ul>
+      <br>
+        <a href="https://github.com/CaioJulioBNG/Kaggle-Playground-S5E5" target="_blank" class="btn">
+          <i class="fa-brands fa-github"></i> Veja o Projeto Completo
+        </a>
+    </div>
+  </div>
+
+  <div id="modal5" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal5')">&times;</span>
+      <h2>Jogo de Perguntas e Respostas</h2>
+      <img src="img/csharp.png" alt="Projeto 3" class="modal-img">
+      <p>Projeto simples com a intenção de solidificar meus conhecimentos em C#</p>
+      <p>Detalhes do Projeto:</p>
+      <ul style="text-align: left;">
+        <li>Declaração de Variáveis</li>
+        <li>Perguntas (Com tratamento básico para String's)</li>
+        <li>Lógica para somar score</li>
+        <li>Impressão do score</li>
+      </ul>
+      <br>
+        <a href="https://github.com/CaioJulioBNG/CSHARP-Perguntas-e-Respostas" target="_blank" class="btn">
+          <i class="fa-brands fa-github"></i> Veja o Projeto Completo
+        </a>
+    </div>
+  </div>
+
+  <div id="modal6" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal6')">&times;</span>
+      <h2>Projeto de Financiamento de Imóveis</h2>
+      <img src="img/javaDetalhes.png" alt="Projeto 3" class="modal-img">
+      <p>Esse projeto foi criado no escopo da disciplina Programação Orientada à Objetos - POO, do curso de Análise e Desenvolvimento de Sistemas, na PUCPR</p>
+      <p>Detalhes do Projeto:</p>
+      <ul style="text-align: left;">
+        <li>Realização do cálculo de um financiamento</li>
+        <li>Suporte a diferentes tipos de variáveis e classes</li>
+        <li>No final, é salvo um resumo sobre o financiamento em um .txt</li>
+      </ul>
+      <br>
+        <a href="https://github.com/CaioJulioBNG/Financiador_em_Java" target="_blank" class="btn">
+          <i class="fa-brands fa-github"></i> Veja o Projeto Completo
+        </a>
+    </div>
+  </div>
+  </div>
+</main>
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
