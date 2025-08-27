@@ -75,6 +75,7 @@ p {
   gap: 3rem;
   padding: 4rem;
   max-width: 1200px;
+  gap: 10rem;
   
   /* centraliza a própria página dentro da .page */
   margin: auto;            
@@ -118,7 +119,6 @@ p {
 .selfie-container {
   flex: 1 1 300px;
   display: flex;
-  margin-right: 150px;
   flex-direction: column; /* empilha verticalmente */
   align-items: center;    /* centraliza horizontalmente */
   gap: 0.3rem;            /* espaçamento*/
@@ -133,7 +133,7 @@ p {
 .contato {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* alinha à esquerda da coluna */
+  align-items: center; /* alinha à esquerda da coluna */
   gap: 0.5rem;
   margin-top: 2rem;
 }
@@ -157,6 +157,7 @@ p {
   align-items: center;
   gap: 0.5rem;
   transition: all 0.3s ease;
+  width: 20rem;
 }
 
 .btn:hover {
@@ -358,14 +359,16 @@ p {
 
   .contato-buttons {
     flex-direction: column;       /* botões empilham verticalmente */
-    width: 100%;
+    width: auto;
+    align-items: center;
     gap: 1rem;
   }
 
   .btn {
-    width: 100%;                  /* botões ocupam largura máxima */
+    width: 70%;                  /* botões ocupam largura máxima */
     justify-content: center;      /* centraliza conteúdo do botão */
   }
+  
 }
 
 
